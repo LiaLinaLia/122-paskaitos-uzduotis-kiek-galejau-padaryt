@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import { useNavigate } from "react-router-dom";
-
-// import UserCard from "./UserCard";
+import CreatePost from './CreatPost';
 
 const PostsGallery = ({}) => {
     const [posts, setPosts] = useState([])
-
     
-
+    
+const navigate = useNavigate()
+const createPost = () => {
+    navigate("/addPost")
+}
 
 
 
     return (
         <div>
-            {/* <div className="p50 d-flex flex-wrap">
-                {messages.map((x, i) => <SinglePost key={i} index={i} messages={x} setMessages={setMessages}/>)}
+            <div className="p50 d-flex flex-wrap">
+                {posts.map((x, i) => <CreatePost key={i} index={i} message={x} setMessages={setPosts}/>)}
             </div>
-            <button onClick={createPost}>Create Post</button> */}
+            <button onClick={createPost}>Create Post</button>
         </div>
 
     );

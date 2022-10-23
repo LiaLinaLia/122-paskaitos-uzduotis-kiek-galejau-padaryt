@@ -2,8 +2,6 @@ import React, {useState} from 'react';
 import {get} from "../plugins/http";
 import { useNavigate } from 'react-router-dom';
 
-import PostsGallery from './PostsGallery';
-
 const ShowPhoto = () => {
     const navigate = useNavigate()
 
@@ -21,7 +19,7 @@ const ShowPhoto = () => {
         <img src={photo} alt="" className='mt20 p10'/>
 
     }
-    const galery = () =>{
+    const galery = () => {
         navigate("/galery")
 
     }

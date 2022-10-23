@@ -1,11 +1,13 @@
 import React, {useState, useRef} from 'react';
 import { useNavigate } from "react-router-dom";
+import {post} from "../plugins/http";
+
 
 const CreatePost = () => {
-    const navigate = useNavigate();
-    const createPost = () => {
-        navigate("/createPost");
-    };
+    // const navigate = useNavigate();
+    // const createPost = () => {
+        // navigate("/newPost");
+    // };
 
     const usernameRef = useRef()
     const titleRef = useRef()
@@ -18,7 +20,7 @@ const CreatePost = () => {
             image: imageRef.current.value,
         }
        await post("addPost", post);
-       createPost()
+    //    createPost()
     };
     
     return (
